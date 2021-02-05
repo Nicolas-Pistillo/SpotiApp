@@ -14,10 +14,10 @@ export class SpotifyService {
   getNewReleases() {
 
     const headers = new HttpHeaders({ // Aca definimos los headers de una peticion, en este caso el Token (Authorization) que nos pide la API de spotify
-      'Authorization': 'Bearer BQBCA7xks6coumI3rhl6EwTuWYjC_l4f31EL6GTf7-xkXOFBiFddDvGTj7eqL72RuJZk4ivSdRhqHkkYams'
+      'Authorization': 'Bearer BQA1ctOBud6WGHQS-u9nvi3XETjnYbYz_zFCdWcnneCobjo9u65rTRK2rWcRQ_2DdWo6svOlJe33rc0HmA8'
     })
 
-    return this.http.get('https://api.spotify.com/v1/browse/new-releases?limit=15',{ headers }) // Agregamos {opciones} a la peticion, en este caso los headers que definimos
+    return this.http.get('https://api.spotify.com/v1/browse/new-releases?limit=14',{ headers }) // Agregamos {opciones} a la peticion, en este caso los headers que definimos
 
   }
 }
