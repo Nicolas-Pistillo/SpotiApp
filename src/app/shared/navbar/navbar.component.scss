@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #131313 !important;
+}
+
+.navbar-brand {
+    color: #1ed760;
+    transition: all .3s;
+}
+
+.navbar-brand:hover {
+    color: #00ff44;
+}
+
+.active {
+    border-bottom: 2px solid #1ed760;
+}

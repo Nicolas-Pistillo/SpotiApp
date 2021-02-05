@@ -1,0 +1,20 @@
+<h2 class="text-center mb-4">Usuarios mas reconocidos de SpotiApp</h2>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr class="text-center">
+            <th scope="col">Ranking</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Empresa donde trabaja</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of data_users; let i = index" class="text-center">
+            <td>#{{i + 1}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.company.name}}</td>
+        </tr>
+    </tbody>
+</table>
