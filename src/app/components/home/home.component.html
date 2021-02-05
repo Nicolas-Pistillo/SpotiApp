@@ -1,1 +1,19 @@
-<p>home works!</p>
+<h1 class="text-center">¡Bienvenido a SpotiApp!</h1>
+<p class="text-center">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque non blanditiis consequatur deserunt, nihil neque odit sapiente dolorum facere. Blanditiis delectus suscipit provident voluptates quaerat repudiandae. Reprehenderit harum, adipisci, dolorem sed consequuntur officia praesentium officiis laudantium assumenda enim rem molestias, neque repellendus delectus! Qui.
+</p>
+
+<div class="card-columns">
+    <div *ngFor="let lanzamiento of spotyLanzamienos" class="card puntero">
+        <img [src]="lanzamiento.images[1].url" class="card-img-top" alt="artist-img">
+        <div class="card-body">
+            <h5 class="card-title">{{lanzamiento.name}}</h5>
+            <p class="card-text">Artista:
+                <span *ngFor="let artista of lanzamiento.artists">
+                    {{artista.name}}
+                </span>
+            </p>
+            <p class="card-text"><small class="text-muted">{{lanzamiento.album_type}}</small></p>
+        </div>
+    </div>
+</div>

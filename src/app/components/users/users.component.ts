@@ -16,7 +16,6 @@ export class UsersComponent implements OnInit {
     this.http.get('https://jsonplaceholder.typicode.com/users') //Realizamos una peticion GET (metodo) pasandole la URL de los recursos
     .subscribe( data => { /* En el momento en que los datos de los recursos esten listos, 
     estaran disponibles en "data", el cual esta subscrito a la peticion*/
-      console.log(data);
       this.data_users = data;
     });
 
