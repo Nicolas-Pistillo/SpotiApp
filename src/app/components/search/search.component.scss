@@ -1,3 +1,7 @@
+.search-title {
+    color: #1ed760;
+}
+
 .card-columns {
     orphans: unset !important;
     widows: unset !important;
@@ -21,16 +25,6 @@
             color: #f0f0f0;
         }
     }
-}
-
-.link-artista {
-    background-color: #fff;
-    color: #131313;
-    transition: all .3s;
-}
-.link-artista:hover {
-    background-color: #1ed760;
-    color: #f0f0f0;
 }
 
 @media (max-width:575px) {

@@ -3,6 +3,7 @@ $color_1: #181818;
 body {
     background-color: $color_1;
     color: #f0f0f0 !important;
+    scroll-behavior: smooth;
 }
 
 hr {

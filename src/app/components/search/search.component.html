@@ -1,6 +1,8 @@
 <div class="row mb-5">
     <div class="col">
-        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista">
+        <h2 class="search-title">Buscar Artistas</h2>
+
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Busquemos un artista...">
     </div>
 </div>
 
@@ -14,7 +16,7 @@
                     {{genero}}
                 </span> 
             </p>
-            <a *ngIf="artista.external_urls.spotify" href="{{artista.external_urls.spotify}}" target="_blank" class="link-artista btn btn-block">
+            <a *ngIf="artista.external_urls.spotify" href="{{artista.external_urls.spotify}}" target="_blank" class="btn btn-block btn-outline-success">
                 Visitar Artista
             </a>
         </div>
