@@ -1,0 +1,51 @@
+.card-columns {
+    orphans: unset !important;
+    widows: unset !important;
+    column-gap: 2em;
+}
+
+.card {
+    transition: all .3s;
+    margin: 20px 0;
+}
+
+.card:hover {
+    background-color: #181818;
+    transform: scale(1.08,1.08);
+    border: 2px solid #1ed760;
+    .card-body {
+        .card-title {
+            color: #1ed760;
+        }
+        .card-text {
+            color: #f0f0f0;
+        }
+    }
+}
+
+.link-artista {
+    background-color: #fff;
+    color: #131313;
+    transition: all .3s;
+}
+.link-artista:hover {
+    background-color: #1ed760;
+    color: #f0f0f0;
+}
+
+@media (max-width:575px) {
+    .card {
+        margin: 2em 0 !important;
+    }
+
+    .card:hover {
+        transform: unset !important;
+        transition: none;
+    }
+}
+
+@media (min-width:576px) and (max-width:766px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
