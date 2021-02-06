@@ -19,6 +19,9 @@ import { UsersComponent } from './components/users/users.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
+// PIPES
+import { NoImagePipe } from './pipes/no-image.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,8 @@ import { ROUTES } from './app.routes';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    UsersComponent
+    UsersComponent,
+    NoImagePipe
   ],
   imports: [
     BrowserModule,

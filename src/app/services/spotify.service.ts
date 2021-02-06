@@ -8,15 +8,13 @@ import { map } from 'rxjs/operators'; // Los reactive extensions tienen muchos o
 
 export class SpotifyService {
 
-  constructor(private http:HttpClient) {
-    console.log('Servicio de Spotify listo');
-  }
+  constructor(private http:HttpClient) {}
 
   getQuery(query:string) {
     const url = `https://api.spotify.com/v1/${query}`;
 
     const headers = new HttpHeaders({ 
-      'Authorization': 'Bearer BQDOGci-_IXokVqxyM2BRl1qPw_4AcuDsFJj1fRs0TjJkmesLszbkqGW7l71bii9sCtRixGS4qqMXGbcMDY'
+      'Authorization': 'Bearer BQAijtK01eyw0flg3VZrctyJdrXpJ8Sz2OEcu8U6Evttx3trMnDszkxpUZaiognizTSVHqkuxdVn1FaGVpo'
     })
 
     return this.http.get(url, {headers});
@@ -28,7 +26,7 @@ export class SpotifyService {
   }
 
   getArtists(termino:string) {
-    return this.getQuery(`search?query=${termino}&type=artist&offset=0&limit=5`)
+    return this.getQuery(`search?query=${termino}&type=artist&offset=0&limit=8`)
     .pipe( map (data => {
       return data['artists'].items;
     }))

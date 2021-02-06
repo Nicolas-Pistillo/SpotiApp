@@ -4,6 +4,7 @@
 
 .card-columns {
     column-gap: 2em;
+    orphans: unset !important;
 }
 
 .card {

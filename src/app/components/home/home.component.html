@@ -3,11 +3,11 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque non blanditiis consequatur deserunt, nihil neque odit sapiente dolorum facere. Blanditiis delectus suscipit provident voluptates quaerat repudiandae. Reprehenderit harum, adipisci, dolorem sed consequuntur officia praesentium officiis laudantium assumenda enim rem molestias, neque repellendus delectus! Qui.
 </p>
 
-<h2 class="novedades">Ultimas Novedades</h2>
+<h2 class="novedades mb-3">Ultimas Novedades</h2>
 
 <div class="card-columns">
     <div *ngFor="let lanzamiento of spotyLanzamienos" class="card puntero animated fadeIn">
-        <img [src]="lanzamiento.images[1].url" class="card-img-top" alt="artist-img">
+        <img [src]="lanzamiento.images | noImage" class="card-img-top" alt="artist-img">
         <div class="card-body">
             <h5 class="card-title">{{lanzamiento.name}}</h5>
             <p class="card-text">Artista:
