@@ -19,7 +19,7 @@ export class SearchComponent {
     .subscribe((artista:any) => {
       this.artistasSearch = artista;
       console.log(artista);
-    })
+      })
     }
   }
 

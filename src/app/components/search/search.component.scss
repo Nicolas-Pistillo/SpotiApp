@@ -27,12 +27,8 @@
 
 @media (max-width:575px) {
     .card {
-        margin: 2em 0 !important;
-    }
-
-    .card:hover {
-        transform: unset !important;
-        transition: none;
+        width: 70%;
+        margin: 2em auto !important;
     }
 }
 

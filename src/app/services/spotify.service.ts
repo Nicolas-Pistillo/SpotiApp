@@ -12,22 +12,25 @@ export class SpotifyService {
     console.log('Servicio de Spotify listo');
   }
 
-  getNewReleases() {
+  getQuery(query:string) {
+    const url = `https://api.spotify.com/v1/${query}`;
 
-    const headers = new HttpHeaders({ // Aca definimos los headers de una peticion, en este caso el Token (Authorization) que nos pide la API de spotify
-      'Authorization': 'Bearer BQBW5nKrkRrHgZmaEfjdcSqKegUDszvv6nt4Md4-bpnzw4iAh17Zq-NLvMOmB_TwEXrBBmxx0Ec16KMuaGo'
+    const headers = new HttpHeaders({ 
+      'Authorization': 'Bearer BQDOGci-_IXokVqxyM2BRl1qPw_4AcuDsFJj1fRs0TjJkmesLszbkqGW7l71bii9sCtRixGS4qqMXGbcMDY'
     })
 
-    return this.http.get('https://api.spotify.com/v1/browse/new-releases?limit=20',{ headers })// Agregamos {opciones} a la peticion, en este caso los headers que definimos
-    .pipe( map( data => data['albums'].items)); // Hacemos que la data en bruto busque una propiedad llamada albums))
+    return this.http.get(url, {headers});
+  }
+
+  getNewReleases() {
+    return this.getQuery('browse/new-releases?limit=20')
+    .pipe( map(data => data['albums'].items));
   }
 
   getArtists(termino:string) {
-    const headers = new HttpHeaders({ 
-      'Authorization': 'Bearer BQBW5nKrkRrHgZmaEfjdcSqKegUDszvv6nt4Md4-bpnzw4iAh17Zq-NLvMOmB_TwEXrBBmxx0Ec16KMuaGo'
-    })
-
-    return this.http.get(`https://api.spotify.com/v1/search?query=${termino}&type=artist&offset=0&limit=4`,{ headers })
-    .pipe( map(data => data['artists'].items));
+    return this.getQuery(`search?query=${termino}&type=artist&offset=0&limit=5`)
+    .pipe( map (data => {
+      return data['artists'].items;
+    }))
   }
 }
