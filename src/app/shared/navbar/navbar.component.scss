@@ -1,23 +1,25 @@
 .navbar {
     background-color: #131313 !important;
+    .navbar-brand {
+        transition: all .3s;
+    }
+    .navbar-brand:hover {
+        color: #1ed760;
+    }
     .navbar-toggler {
         border: none;
         .menu-icon {
-            font-size: 28px;
+            font-size: 32px;
             color: #1ed760;
             transition: all .3s;
         }
     }
 }
 
-.navbar-brand {
-    transition: all .3s;
-}
-
-.navbar-brand:hover {
-    color: #1ed760;
-}
-
 .active {
     border-bottom: 2px solid #1ed760;
+}
+
+.openMenu {
+    transform: rotate(180deg);
 }

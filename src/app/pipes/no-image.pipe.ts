@@ -14,7 +14,5 @@ halla realmente imagenes validas, de lo contrario cargaremos la imagen de "image
     } else {
       return "assets/img/noimage.png";
     }
-
   }
-
 }

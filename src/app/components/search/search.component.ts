@@ -10,14 +10,14 @@ export class SearchComponent {
 
   constructor(private spotify:SpotifyService) { }
 
-  artistasSearch:any[] = [];
+  spotyArtistas:any[] = [];
 
   buscar(termino:string) {
 
     if (termino != '') {
       this.spotify.getArtists(termino)
     .subscribe((artista:any) => {
-      this.artistasSearch = artista;
+      this.spotyArtistas = artista;
       console.log(artista);
       })
     }

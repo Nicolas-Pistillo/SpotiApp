@@ -14,6 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UsersComponent } from './components/users/users.component';
+import { CardsComponent } from './shared/cards/cards.component';
 
 // RUTAS
 import { RouterModule } from '@angular/router';
@@ -21,6 +22,7 @@ import { ROUTES } from './app.routes';
 
 // PIPES
 import { NoImagePipe } from './pipes/no-image.pipe';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { NoImagePipe } from './pipes/no-image.pipe';
     ArtistaComponent,
     NavbarComponent,
     UsersComponent,
-    NoImagePipe
+    NoImagePipe,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

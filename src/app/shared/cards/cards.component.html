@@ -1,0 +1,21 @@
+<div class="card-columns">
+    <div *ngFor="let data of spotyData" class="card puntero animated fadeIn">
+        <img [src]="data.images | noImage" class="card-img-top" alt="artist-img">
+        <div class="card-body">
+            <h5 class="card-title">{{data.name}}</h5>
+            <p *ngIf="data.artists" class="card-text">Artista:
+                <span *ngFor="let artista of data.artists">
+                    {{artista.name}}
+                </span>
+            </p>
+            <p *ngIf="data.genres && data.genres.length > 0" class="card-text">Generos: 
+                <span *ngFor="let genero of data.genres" class="badge badge-pill badge-primary p-1">
+                    {{genero}}
+                </span> 
+            </p>
+            <a href="{{data.external_urls.spotify}}" target="_blank" class="btn btn-block btn-outline-success">Visitar Artista</a>
+
+            <p class="card-text"><small class="text-muted">{{data.album_type}}</small></p>
+        </div>
+    </div>
+</div>
