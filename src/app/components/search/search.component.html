@@ -6,4 +6,6 @@
     </div>
 </div>
 
-<app-cards [spotyData]="spotyArtistas"></app-cards>
+<app-loading *ngIf="loading"></app-loading>
+
+<app-cards *ngIf="!loading" [spotyData]="spotyArtistas"></app-cards>

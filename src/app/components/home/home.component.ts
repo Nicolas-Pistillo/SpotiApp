@@ -13,11 +13,13 @@ export class HomeComponent implements OnInit {
   }
 
   spotyLanzamientos:any[];
+  loading:boolean = true;
 
   ngOnInit(): void {
     this.spotify.getNewReleases()
     .subscribe((data:any) => { // Nos suscribimos a la respuesta de la peticion y guardamos los items que necesitamos.
       this.spotyLanzamientos = data; // Recibimos la data YA filtrada desde el spotify.service utilizando el operador map.
+      this.loading = false;
     });
   }
 
