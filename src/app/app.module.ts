@@ -23,6 +23,8 @@ import { ROUTES } from './app.routes';
 
 // PIPES
 import { NoImagePipe } from './pipes/no-image.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { SeguirSeguroPipe } from './pipes/seguir-seguro.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { NoImagePipe } from './pipes/no-image.pipe';
     NoImagePipe,
     CardsComponent,
     LoadingComponent,
-    ArtistaComponent
+    ArtistaComponent,
+    DomseguroPipe,
+    SeguirSeguroPipe
   ],
   imports: [
     BrowserModule,

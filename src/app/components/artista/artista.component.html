@@ -1,1 +1,48 @@
-<p>artista works!</p>
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="row" *ngIf="!loading">
+    <div class="col-md-3 text-center img-container">
+        <img [src]="spotyArtista.images | noImage" [alt]="spotyArtista.name" class="img-circle shadow-lg">
+        <iframe [src]="spotyArtista.uri | seguirSeguro" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+    </div>
+
+    <div class="col-md-5 col-lg-4 data-artist">
+        <h3 class="mb-3">{{spotyArtista.name}}</h3>
+        <a href="{{spotyArtista.external_urls.spotify}}" target="_blank" class="mb-3 btn btn-success">Ver en Spotify</a>
+        <button class="btn btn-outline-danger buscar-mas" routerLink="/search">Buscar mas artistas</button>
+    </div>
+
+    <div class="popular-container col-md-4">
+        <p class="popularity mb-2">Popularidad: <span>{{spotyArtista.popularity}}</span></p>
+
+    </div>
+</div>
+
+<caption class="d-block">
+    <i>Si tu dispositivo es muy pequeño, puedes <span style="color: #1ed760;">scrollear</span> sobre la tabla</i>
+</caption>
+<table class="table table-responsive-md text-white text-center">
+    <thead>
+        <tr>
+            <th scope="col">Foto</th>
+            <th scope="col">Album</th>
+            <th scope="col">Cancion</th>
+            <th scope="col">Vista Previa</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of spotyTopTracks">
+            <td class="align-middle">
+                <img [src]="item.album.images | noImage" alt="artist-album" class="img-thumb img-circle">
+            </td>
+            <td class="align-middle">{{item.album.name}}</td>
+            <td class="align-middle">{{item.name}}</td>
+            <td class="align-middle">
+
+                <iframe [src]="item.uri | domseguro" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            </td>
+        </tr>
+    </tbody>
+</table>

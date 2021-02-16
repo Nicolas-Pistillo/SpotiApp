@@ -1,9 +1,14 @@
-<h1 class="text-center">¡Bienvenido a SpotiApp!</h1>
-<p class="text-center">
+<h1 class="text-center animated fadeIn">¡Bienvenido a SpotiApp!</h1>
+<p class="animated fadeIn fast text-center">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque non blanditiis consequatur deserunt, nihil neque odit sapiente dolorum facere. Blanditiis delectus suscipit provident voluptates quaerat repudiandae. Reprehenderit harum, adipisci, dolorem sed consequuntur officia praesentium officiis laudantium assumenda enim rem molestias, neque repellendus delectus! Qui.
 </p>
 
-<h2 class="novedades mb-3">Ultimos Lanzamientos</h2>
+<div *ngIf="error" class="alert alert-danger">
+    <h4>ERROR</h4>
+    <p class="m-0">{{mensajeError}}</p>
+</div>
+
+<h2 *ngIf="!error" class="novedades mb-3">Ultimos Lanzamientos</h2>
 
 <app-loading *ngIf="loading"></app-loading>
 

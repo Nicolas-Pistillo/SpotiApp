@@ -22,7 +22,6 @@ export class SearchComponent {
     .subscribe((artista:any) => {
       this.spotyArtistas = artista;
       this.loading = false;
-      console.log(artista);
       })
     } else {
       this.loading = false;
