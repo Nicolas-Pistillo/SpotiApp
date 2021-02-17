@@ -16,6 +16,7 @@ import { UsersComponent } from './components/users/users.component';
 import { CardsComponent } from './shared/cards/cards.component';
 import { LoadingComponent } from './shared/loading/loading.component';
 import { ArtistaComponent } from './components/artista/artista.component';
+import { ErrorsComponent } from './shared/errors/errors.component';
 
 // RUTAS
 import { RouterModule } from '@angular/router';
@@ -38,7 +39,8 @@ import { SeguirSeguroPipe } from './pipes/seguir-seguro.pipe';
     LoadingComponent,
     ArtistaComponent,
     DomseguroPipe,
-    SeguirSeguroPipe
+    SeguirSeguroPipe,
+    ErrorsComponent
   ],
   imports: [
     BrowserModule,
