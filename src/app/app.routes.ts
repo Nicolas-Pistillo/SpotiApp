@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
-import{ HomeComponent } from './components/home/home.component';
-import{ SearchComponent } from './components/search/search.component';
+import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
 import { UsersComponent } from './components/users/users.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 

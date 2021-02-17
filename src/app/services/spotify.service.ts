@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators'; // Los reactive extensions tienen muchos operadores utiles para filtrar data en este caso 
 
 @Injectable({
-  providedIn: 'root' // Esto le dice a Angular que este servicio en cuestion esta hecho por nosotros
+  providedIn: 'root' // Esto hara el provide automaticamente en la raiz del proyecto, por lo que no tendremos que importarlo en el array de providers del app module
 })
 
 export class SpotifyService {
@@ -14,7 +14,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
 
     const headers = new HttpHeaders({ 
-      'Authorization': 'Bearer BQA_4tB3HelqHZqL0U0nTRUTfkM528EHywCk6bqocWIW3TtA3Cw0tYfBPIbNyQUH-hkbGHX872gPoP9jTzg'
+      'Authorization': 'Bearer BQCLPXy6NGlSYIRNjjteb2i6cZLu3xCWmGHoyBURZ5RgPpmwofa4DIDCAU-mFQ1eHPYjvxpXKhy7Be8iWWg'
     })
 
     return this.http.get(url, {headers});
